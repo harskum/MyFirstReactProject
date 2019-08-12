@@ -25,8 +25,8 @@ stages:
           npm run build
           displayName: 'npm install and build'
 
-#      - script: Write-Error "file path not found"
-#        displayName: Publish to artifact services
+      # - script: Write-Error "file path not found"
+      #   displayName: Publish to artifact services
   
 - stage: DeploymentStage
   displayName: Prod
@@ -38,8 +38,8 @@ stages:
     steps:
     - checkout: none
     - script: echo "Deploy project"
-    - script: Write-Error "Can't deploy, sorry!"
-      displayName: Deploy
+    # - script: Write-Error "Can't deploy, sorry!"
+    #   displayName: Deploy
 
 - stage: TestingStage
   displayName: TestStage
