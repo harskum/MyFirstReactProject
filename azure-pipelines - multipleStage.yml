@@ -10,8 +10,6 @@ stages:
   jobs:  
   - job: Build
     displayName: Build job
-    trigger:
-    - master
 
     pool:
       name: 'Default'
