@@ -30,8 +30,8 @@ stages:
     steps:
     - checkout: none
     - script: echo "Deploy project"
-    - script: Write-Error "Can't deploy, sorry!"
-      displayName: Deploy
+    # - script: Write-Error "Can't deploy, sorry!"
+    #   displayName: Deploy
 
 - stage: TestingStage
   displayName: TestStage
