@@ -57,7 +57,7 @@ stages:
 - stage: MakingUserStage
   displayName: Making User
   jobs:
-  - job: Make User
+  - job: MakeUser
     displayName: Building AI users
     pool:
       name: 'Default'
