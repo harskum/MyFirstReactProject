@@ -30,7 +30,6 @@ stages:
   
 - stage: DeploymentStage
   displayName: Prod
-  dependsOn: [Staging]
   jobs:
   - job: Deploy
     displayName: Deploy to kubernetes
@@ -44,7 +43,6 @@ stages:
 
 - stage: TestingStage
   displayName: TestStage
-  dependsOn: [Staging]
   jobs:
   - job: Test
     displayName: Test Code
@@ -58,7 +56,6 @@ stages:
 
 - stage: MakingUserStage
   displayName: Making User
-  dependsOn: [Staging]
   jobs:
   - job: Make User
     displayName: Building AI users
@@ -72,7 +69,6 @@ stages:
 
 - stage: MakeThemPay
   displayName: Make AI pay
-  dependsOn: [Staging]
   jobs:
   - job: MakeAIbotspay
     displayName: Make AI bots pay
