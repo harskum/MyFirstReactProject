@@ -64,8 +64,8 @@ stages:
     steps:
     - checkout: none
     - script: echo "Building AI users for project"
-    - script: Write-Error "Can't make a user dude, what are you thinking!"
-      displayName: Build AI bots
+    # - script: Write-Error "Can't make a user dude, what are you thinking!"
+    #   displayName: Build AI bots
 
 - stage: MakeThemPay
   displayName: Make AI pay
