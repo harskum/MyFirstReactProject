@@ -43,6 +43,7 @@ stages:
     steps:
     - checkout: none
     - script: echo "Test project"
+    - script: npm test
     # - script: Write-Error "Can't test, sorry!"
     #   displayName: Test
 
