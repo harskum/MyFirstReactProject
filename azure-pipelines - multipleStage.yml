@@ -47,6 +47,17 @@ stages:
     # - script: Write-Error "Can't test, sorry!"
     #   displayName: Test
 
+- stage: PublishTestResults
+  displayName: Publish Test Results
+  jobs:
+  - job: Publish
+    displayName: Publishing Test Results
+    steps:
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '**/junit.xml'
+
 - stage: MakingUserStage
   displayName: Making User
   jobs:
