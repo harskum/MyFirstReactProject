@@ -69,5 +69,5 @@ stages:
     steps:
     - checkout: none
     - script: echo "Making payment"
-    # - script: Write-Error "Seriously?"
-    #   displayName: Make payment
+    - script: Write-Error "Seriously?"
+      displayName: Make payment
