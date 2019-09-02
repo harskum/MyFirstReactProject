@@ -43,8 +43,8 @@ stages:
     steps:
     - checkout: none
     - script: echo "Test project"
-    - script: Write-Error "Can't test, sorry!"
-      displayName: Test
+    # - script: Write-Error "Can't test, sorry!"
+    #   displayName: Test
 
 - stage: MakingUserStage
   displayName: Making User
