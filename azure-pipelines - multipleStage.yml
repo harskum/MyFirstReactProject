@@ -16,7 +16,7 @@ stages:
 
     steps:
       - script: echo "Starting Build"
-
+      - script: npm install
       # - script: Write-Error "file path not found"
       #   displayName: Publish to artifact services
   
