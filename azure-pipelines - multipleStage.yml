@@ -56,6 +56,28 @@ stages:
     steps:
     - checkout: none
     - script: echo "Building AI users for project"
+    # - script: Write-Error "Can't make a user dude, what are you thinking!"
+    #   displayName: Build AI bots
+
+- stage: MakingUserStage2
+  displayName: Making User
+  jobs:
+  - job: MakeUser
+    displayName: Building AI users
+    pool:
+      name: 'Default'
+    steps:
+    - checkout: none
+    - script: echo "Building AI users for project"
+    # - script: Write-Error "Can't make a user dude, what are you thinking!"
+    #   displayName: Build AI bots
+  - job: MakeUser2
+    displayName: Building AI users part 2
+    pool:
+      name: 'Default'
+    steps:
+    - checkout: none
+    - script: echo "Building AI users(part 2) for project"
     - script: Write-Error "Can't make a user dude, what are you thinking!"
       displayName: Build AI bots
 
