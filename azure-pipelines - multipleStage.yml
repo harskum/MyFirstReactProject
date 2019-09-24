@@ -49,6 +49,7 @@ stages:
 
 - stage: PublishTestResults
   displayName: Publish Test Results
+  dependsOn: []
   jobs:
   - job: Publish
     displayName: Publishing Test Results
