@@ -16,5 +16,9 @@ steps:
 
 - script: Write-Error "file path not found"
   displayName: "Publish to artifacts services"
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: 'junit.xml'
 
   
