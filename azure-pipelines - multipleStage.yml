@@ -15,7 +15,7 @@ stages:
       name: 'Default'
 
     steps:
-      - script: Write-Error "Can't deploy, sorry!"
+      - script: echo "Starting Build"
         displayName: Deploy
       # - script: Write-Error "file path not found"
       #   displayName: Publish to artifact services
@@ -29,7 +29,7 @@ stages:
       name: 'Default'
     steps:
     - checkout: none
-    - script: echo "Deploy project"
+    - script: Write-Error "Can't deploy, sorry!"
       displayName: Deploy
     # - script: Write-Error "Can't deploy, sorry!"
     #   displayName: Deploy
