@@ -29,8 +29,8 @@ stages:
       name: 'Default'
     steps:
     - checkout: none
-    - script: Write-Error "Can't deploy, sorry!"
-      displayName: Deploy
+    # - script: Write-Error "Can't deploy, sorry!"
+    #   displayName: Deploy
     # - script: Write-Error "Can't deploy, sorry!"
     #   displayName: Deploy
 
