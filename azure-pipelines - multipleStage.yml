@@ -20,17 +20,20 @@ stages:
       #   displayName: Publish to artifact services
   
 - stage: DeploymentStage
-  displayName: Prod
+  displayName: Deploy
+  - stage: deploy
   jobs:
-  - job: Deploy
-    displayName: Deploy to kubernetes
+  - deployment: DeployWeb
+    displayName: deploy Web App
     pool:
-      name: 'Default'
-    steps:
-    - checkout: none
-    - script: echo "Deploy project"
-    # - script: Write-Error "Can't deploy, sorry!"
-    #   displayName: Deploy
+      vmImage: 'Ubuntu-16.04'
+    # creates an environment if it doesn't exist
+    environment: 'harshit-env'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo Hello world
 
 - stage: TestingStage
   displayName: TestStage
