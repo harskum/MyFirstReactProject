@@ -21,7 +21,6 @@ stages:
   
 - stage: DeploymentStage
   displayName: Deploy
-  - stage: deploy
   jobs:
   - deployment: DeployWeb
     displayName: deploy Web App
