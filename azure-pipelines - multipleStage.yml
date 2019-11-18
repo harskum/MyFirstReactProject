@@ -16,7 +16,6 @@ stages:
 
     steps:
       - script: echo "Starting Build"
-      - script: npm install
       # - script: Write-Error "file path not found"
       #   displayName: Publish to artifact services
   
@@ -43,21 +42,16 @@ stages:
     steps:
     - checkout: none
     - script: echo "Test project"
-    - script: npm test
     # - script: Write-Error "Can't test, sorry!"
     #   displayName: Test
 
 - stage: PublishTestResults
   displayName: Publish Test Results
-  dependsOn: []
   jobs:
   - job: Publish
     displayName: Publishing Test Results
     steps:
-    - task: PublishTestResults@2
-      inputs:
-        testResultsFormat: 'JUnit'
-        testResultsFiles: '**/junit.xml'
+    - script: echo "Publish Test Results"
 
 - stage: MakingUserStage
   displayName: Making User
