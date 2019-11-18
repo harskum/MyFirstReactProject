@@ -25,7 +25,7 @@ stages:
   - deployment: DeployWeb
     displayName: deploy Web App
     pool:
-      vmImage: 'Ubuntu-16.04'
+      name: 'Default'
     # creates an environment if it doesn't exist
     environment: 'harshit-env'
     strategy:
