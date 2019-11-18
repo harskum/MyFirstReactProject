@@ -50,6 +50,8 @@ stages:
   jobs:
   - job: Publish
     displayName: Publishing Test Results
+    pool:
+      name: 'Default'
     steps:
     - script: echo "Publish Test Results"
 
