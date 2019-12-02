@@ -16,23 +16,23 @@ stages:
 
     steps:
       - script: echo "Starting Build"
-        displayName: Deploy
       # - script: Write-Error "file path not found"
       #   displayName: Publish to artifact services
   
 - stage: DeploymentStage
-  displayName: Prod
+  displayName: Deploy
   jobs:
-  - job: Deploy
-    displayName: Deploy to kubernetes
+  - deployment: DeployWeb
+    displayName: deploy Web App
     pool:
       name: 'Default'
-    steps:
-    - checkout: none
-    # - script: Write-Error "Can't deploy, sorry!"
-    #   displayName: Deploy
-    # - script: Write-Error "Can't deploy, sorry!"
-    #   displayName: Deploy
+    # creates an environment if it doesn't exist
+    environment: 'harshit-env'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo Hello world
 
 - stage: TestingStage
   displayName: TestStage
@@ -46,3 +46,39 @@ stages:
     - script: echo "Test project"
     # - script: Write-Error "Can't test, sorry!"
     #   displayName: Test
+
+- stage: PublishTestResults
+  displayName: Publish Test Results
+  jobs:
+  - job: Publish
+    displayName: Publishing Test Results
+    pool:
+      name: 'Default'
+    steps:
+    - script: echo "Publish Test Results"
+
+- stage: MakingUserStage
+  displayName: Making User
+  jobs:
+  - job: MakeUser
+    displayName: Building AI users
+    pool:
+      name: 'Default'
+    steps:
+    - checkout: none
+    - script: echo "Building AI users for project"
+    # - script: Write-Error "Can't make a user dude, what are you thinking!"
+    #   displayName: Build AI bots
+
+- stage: MakeThemPay
+  displayName: Make AI pay
+  jobs:
+  - job: MakeAIbotspay
+    displayName: Make AI bots pay
+    pool:
+      name: 'Default'
+    steps:
+    - checkout: none
+    - script: echo "Making payment"
+    # - script: Write-Error "Seriously?"
+    #   displayName: Make payment
