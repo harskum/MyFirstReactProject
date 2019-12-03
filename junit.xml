@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="2" failures="1" time="2.811">
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2019-08-27T09:17:58" time="1.833" tests="2">
+    <testcase classname=" renders without crashing" name=" renders without crashing" time="0.019">
+    </testcase>
+    <testcase classname=" test that fails" name=" test that fails" time="0.006">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 0
+Received: 1
+    at Object.toBe (C:\Users\harskum\Documents\Repos\MyFirstReactProject\src\App.test.js:15:13)
+    at Object.asyncJestTest (C:\Users\harskum\Documents\Repos\MyFirstReactProject\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:102:37)
+    at resolve (C:\Users\harskum\Documents\Repos\MyFirstReactProject\node_modules\jest-jasmine2\build\queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\harskum\Documents\Repos\MyFirstReactProject\node_modules\jest-jasmine2\build\queueRunner.js:26:19)
+    at promise.then (C:\Users\harskum\Documents\Repos\MyFirstReactProject\node_modules\jest-jasmine2\build\queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
